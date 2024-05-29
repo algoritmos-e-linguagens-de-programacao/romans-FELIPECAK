@@ -43,9 +43,8 @@ def int_to_roman(num):
         elif sub >= 1000:
             print("M", end="")
             sub -= 1000
-    return "1"
     
-    def roman_to_int(roman):
+def roman_to_int(roman):
     roman_values = {
         'I': 1,
         'V': 5,
@@ -54,7 +53,7 @@ def int_to_roman(num):
         'C': 100,
         'D': 500,
         'M': 1000
-    }
+}
 
     total = 0
     prev_value = 0
@@ -69,6 +68,4 @@ def int_to_roman(num):
 
     return total
 roman_numeral = "MMXVIII"
-print(roman_to_int(roman_numeral)) 
 
-    return "1"
