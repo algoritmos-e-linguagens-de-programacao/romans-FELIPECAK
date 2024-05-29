@@ -1,48 +1,50 @@
 def int_to_roman(num): 
+    roman = ""
     sub = num
     while sub != 0:
         if sub == 4:
-            print("IV", end="")
+            roman += "IV"
             sub -= 4
         elif sub == 9:
-            print("IX", end="")
+            roman += "IX"
             sub -= 9
         elif sub >= 40 and sub < 50:
-            print("XL", end="")
+            roman += "XL"
             sub -= 40
         elif sub >= 90 and sub < 100:
-            print("XC", end="")
+            roman += "XC"
             sub -= 90
         elif sub >= 400 and sub < 500:
-            print("CD", end="")
+            roman += "CD"
             sub -= 400
         elif sub >= 900 and sub < 1000:
-            print("CM", end="")
+            roman += "CM"
             sub -= 900
         elif sub == 1:
-            print("I", end="")
+            roman += "I"
             sub -= 1
         elif sub < 5:
-            print("I", end="")
+            roman += "I"
             sub -= 1
         elif sub < 10:
-            print("V", end="")
+            roman += "V"
             sub -= 5
         elif sub < 50:
-            print("X", end="")
+            roman += "X"
             sub -= 10
         elif sub < 100:
-            print("L", end="")
+            roman += "L"
             sub -= 50
         elif sub < 500:
-            print("C", end="")
+            roman += "C"
             sub -= 100
         elif sub < 1000:
-            print("D", end="")
+            roman += "D"
             sub -= 500
         elif sub >= 1000:
-            print("M", end="")
+            roman += "M"
             sub -= 1000
+    return roman
     
 def roman_to_int(roman):
     roman_values = {
